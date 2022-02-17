@@ -10,7 +10,7 @@ http.createServer(function (req, res) {
 
     // ROUTING (tkj kok ngoding)
     // in every programming langunge, routing is like this
-    switch (url) {
+    switch (url.toLowerCase()) {
         case '/':
             dataResponse = {
                 data: 'ini adalah home page'
@@ -31,7 +31,6 @@ http.createServer(function (req, res) {
             dataResponse = {
                 data: 'page not found'
             }
-            break;
     }
     res.end(JSON.stringify(dataResponse))
 }).listen(4200)
