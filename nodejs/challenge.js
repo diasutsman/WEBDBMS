@@ -13,7 +13,7 @@ const utsman = dias.createServer((req, res) => {
             break;
         case '/form':
             // buat respons mengirim data "anda berhasil mengirim data" jika methodnya POST
-            dataResponse.data = method == 'POST'? 'you successfully add data' : 'Sorry, cannot add data'
+            dataResponse.data = method == 'POST'? 'you successfully add data' :  'Sorry, cannot add data'
             break;
         case '/about':
             dataResponse.data = 'This is about page'
