@@ -1,11 +1,12 @@
 {
-  "name": "introduction",
+  "name": "belajar-install-express",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test1": "echo \"Hello World\""
+    "test1": "echo \"Hello World\"",
+    "start-server": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
