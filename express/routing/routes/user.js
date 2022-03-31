@@ -117,9 +117,13 @@ router.get('/user', (req, res, next) => {
 // get user by id
 router.get('/user/:id', (req, res, next) => {
     // hello user
-    const user = users.find(({id}) => id === parseInt(req.params.id))
+    const user = users.find(({ id }) => id === parseInt(req.params.id))
     if (!user) {
-        res.status(404).send('user not found')
+        // send user not found in object
+        res.send({
+            error: 'user not found'
+        })
+
     }
     res.send(user)
 })
