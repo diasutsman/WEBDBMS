@@ -21,7 +21,7 @@ http.createServer(function (req, res) {
     res.setHeader('Content-type', 'application/json')
     const dataResponse = {},
         myUrl = url.parse(req.url)
-    
+
     if (!myUrl.query) dataResponse.data = 'Query String not found'
     else dataResponse.data = querystring.parse(myUrl.query)
     res.end(JSON.stringify(dataResponse))

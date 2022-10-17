@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chelenge</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(bg.avif);
+    }
+    .form-wrapper {
+      padding: 20px;
+      width: 80%;
+      height: 500px;
+      border-radius: 20px;
+      background-color: white;
+    }
+
+    .form-wrapper form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      row-gap: 8px;
+    }
+
+    input[type="submit"] {
+      background: linear-gradient(90deg, #f02128 0%, #06f35d 99%, #0e19e7 100%);
+      color: white;
+      padding: 4px 8px;
+      border-radius: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form-wrapper">
+    <form>
+      <label for="nama-lengkap">Nama Lengkap</label>
+      <input type="text" id="nama-lengkap" name="nama-lengkap">
+
+      <label for="username">Username</label>
+      <input type="text" id = "username" name = "username">
+
+      <label for="password">Password</label>
+      <input type="text" id = "password" name = "password">
+
+      <label for="about">About</label>
+      <textarea name="about" id="about">
+
+      </textarea>
+
+      <input type="submit" value="Daftar">
+    </form>
+  </div>
+</body>
+
+</html>
