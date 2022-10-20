@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyframes Animation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* container that fill viewport width and height */
+    .container {
+      height: 100vh;
+      display: grid;
+      place-content: center;
+    }
+
+    .animation1 {
+      width: 100px;
+      height: 100px;
+      background: red;
+      display: grid;
+      place-content: center;
+      animation-name: change-bg;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+
+    .animation2 {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: red;
+      display: grid;
+      place-content: center;
+
+      animation-name: bounce;
+      animation-duration: .5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    @keyframes change-bg {
+      from {
+        background: rgb(51, 255, 0);
+      }
+
+      to {
+        background: rgb(6, 250, 250);
+      }
+    }
+
+    @keyframes bounce {
+      from {
+        transform: translateY(0) scale(1);
+      }
+
+      to {
+        transform: translateY(-100px) scale(1.5);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="animation1">
+      <p>Animation 1</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="animation2">
+      <p>Animation 2</p>
+    </div>
+    <hr>
+  </div>
+</body>
+
+</html>
