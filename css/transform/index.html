@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transform</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* ==== Translate ==== */
+
+    .translate {
+      width: 100px;
+      height: 100px;
+      background-color: salmon;
+      display: grid;
+      place-content: center;
+      transition: 0.5s;
+    }
+
+    .translate:hover {
+      transform: translate(0, -100px);
+      opacity: 0.5;
+    }
+
+    /* ==== Rotate ==== */
+    .rotate {
+      width: 500px;
+      height: 100px;
+      background-color: salmon;
+      display: grid;
+      place-content: center;
+      transition: 0.5s;
+    }
+
+    .rotate:hover {
+      transform: rotate(360deg);
+      opacity: 0.5;
+    }
+
+    /* ==== Scale ==== */
+    .scale {
+      width: 100px;
+      height: 100px;
+      background-color: salmon;
+      display: grid;
+      place-content: center;
+      transition: 0.5s;
+    }
+
+    .scale:hover {
+      transform: scale(2);
+      opacity: 0.5;
+    }
+
+    .container {
+      display: grid;
+      place-content: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 
+    Transform ada 2, yaitu:
+    1. Transform 2D
+        - translate()
+        - scale()
+        - rotate()
+        - skew()
+
+    2. Transform 3D
+        - translate3d()
+        - scale3d()
+        - rotate3d()
+        - skew3d()
+        - perspective()
+   -->
+  <div class="container">
+    <div class="translate" onclick="alert('terpencet!')">
+      <h2>Translate</h2>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="rotate">
+      <h2>Rotate</h2>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="scale">
+      <h2>Scale</h2>
+    </div>
+  </div>
+</body>
+
+</html>
